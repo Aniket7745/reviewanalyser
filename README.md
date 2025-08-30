@@ -4,8 +4,7 @@ A simple Firefox extension that analyzes Amazon and Flipkart product reviews usi
 
 ## Features  
 - Smart Review Extraction – Scrapes reviews directly from product pages  
-- AI-Powered Insights – Summarizes pros, cons, sentiment & recommendation  
-- Low Cost – Each analysis costs less than $0.01  
+- AI-Powered Insights – Summarizes pros, cons, sentiment & recommendation   
 - Clean & Fast UI – Easy to use, with loading and error handling  
 - Secure – API calls are made directly, no data is shared externally  
 
@@ -22,7 +21,7 @@ A simple Firefox extension that analyzes Amazon and Flipkart product reviews usi
 
 ## Usage  
 
-1. Open any Amazon or Flipkart product page with reviews.  
+1. Open any Amazon  product page with reviews.  
 2. Click the Review Analyzer icon in your toolbar.  
 3. Click "Analyze Reviews".  
 4. Get a clear recommendation: Buy | Mixed | Don't Buy.  
