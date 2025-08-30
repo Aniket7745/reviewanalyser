@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Review Scraper</h1>
+            <p>Extract Amazon & Flipkart product reviews to text file</p>
+        </header>
+        
+        <main>
+            <div class="url-section">
+                <label for="urlInput">Product URL (Amazon or Flipkart):</label>
+                <div class="url-input-group">
+                    <input 
+                        type="url" 
+                        id="urlInput" 
+                        placeholder="https://www.amazon.in/product-url... or https://www.flipkart.com/product-url..."
+                    >
+                </div>
+            </div>
+            
+            <div class="status-section">
+                <div id="status" class="status">
+                    <span id="statusText">Ready to scrape</span>
+                </div>
+            </div>
+            
+            <div class="button-section">
+                <div class="scraping-options">
+                    <label for="pageCount">Number of pages to scrape:</label>
+                    <select id="pageCount" class="page-select">
+                        <option value="1">1 page (current)</option>
+                        <option value="2">2 pages</option>
+                        <option value="3">3 pages</option>
+                        <option value="5">5 pages</option>
+                        <option value="10">10 pages</option>
+                    </select>
+                </div>
+                <button id="analyzeBtn" class="analyze-btn">
+                    <span class="btn-text">Scrape Reviews</span>
+                    <div class="spinner" id="spinner" style="display: none;">
+                        <div class="spinner-inner"></div>
+                    </div>
+                </button>
+                <button id="goToReviewsBtn" class="go-to-reviews-btn" style="display: none;">
+                    Go to Reviews Section
+                </button>
+            </div>
+            
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h3>Scraped Reviews</h3>
+                <div id="result" class="result-box">
+                    <!-- Result will be inserted here -->
+                </div>
+            </div>
+            
+            <div class="error-section" id="errorSection" style="display: none;">
+                <div id="error" class="error-box">
+                    <!-- Error will be inserted here -->
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <button id="copyUrlBtn" class="copy-url-btn" style="display: none;">Copy Product URL</button>
+            <button id="downloadBtn" class="download-btn" style="display: none;">Download Text File</button>
+            <button id="chatgptBtn" class="chatgpt-btn" style="display: none;">Open in ChatGPT</button>
+        </footer>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

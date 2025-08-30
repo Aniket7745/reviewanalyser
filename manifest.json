@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Review Scraper",
+  "version": "1.0.0",
+  "description": "Scrapes Amazon & Flipkart product reviews and saves them to text file",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "clipboardWrite",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*", 
+        "https://amazon.com/*",
+        "https://www.amazon.in/*",
+        "https://amazon.in/*",
+        "https://www.flipkart.com/*",
+        "https://flipkart.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Review Scraper"
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  }
+}

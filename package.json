@@ -1,0 +1,45 @@
+{
+  "name": "review-analyzer",
+  "version": "1.0.0",
+  "description": "A Firefox WebExtension that analyzes Amazon product reviews using the ChatGPT API",
+  "main": "manifest.json",
+  "scripts": {
+    "build": "echo 'No build process needed for this extension'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "webextension",
+    "amazon",
+    "reviews",
+    "ai",
+    "openai",
+    "chatgpt",
+    "product-analysis"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/review-analyzer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/review-analyzer/issues"
+  },
+  "homepage": "https://github.com/yourusername/review-analyzer#readme",
+  "engines": {
+    "firefox": ">=57.0"
+  },
+  "manifest": {
+    "version": 2,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "https://www.amazon.com/*",
+      "https://amazon.com/*"
+    ]
+  }
+}
